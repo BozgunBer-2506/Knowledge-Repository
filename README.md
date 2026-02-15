@@ -18,7 +18,7 @@ A professional landing hub designed to showcase technical documentation modules 
 - **JavaScript Standards:** Modern ES6+ and asynchronous patterns.
 
 ## 👤 Author
-**Yavuz Baris Ozgun** *IHK Certified IT Support Specialist* [LinkedIn](https://www.linkedin.com/in/the-bozgun/) | [GitHub](https://github.com/BozgunBer-2506)
+**Yavuz Baris Özgün** *IHK Certified IT Support Specialist* [LinkedIn](https://www.linkedin.com/in/the-bozgun/) | [GitHub](https://github.com/BozgunBer-2506)
 
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
