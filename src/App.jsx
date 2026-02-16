@@ -51,6 +51,17 @@ export default function App() {
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 pb-4 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent italic leading-tight">
             Knowledge Repository
           </h1>
+          <div style={{
+            fontSize: '0.85rem',
+            color: '#00ffaa',
+            fontWeight: '700',
+            letterSpacing: '2px',
+            textTransform: 'uppercase',
+            margin: '15px 0',
+            opacity: '0.9'
+          }}>
+            TR CONTENT <span style={{ color: '#fff', margin: '0 8px', opacity: '0.5' }}>•</span> MULTILINGUAL SUPPORT COMING SOON
+          </div>
           <p className="text-slate-400 text-lg max-w-3xl mx-auto font-light">
             Interactive technical guides for Agile Software Development & Cloud Engineering.
           </p>
@@ -91,7 +102,7 @@ export default function App() {
           </div>
         </section>
 
-        <footer className="mt-6 text-center text-slate-600 text-[10px] tracking-[0.3em] uppercase">
+        <footer className="mt-12 text-center text-slate-500 text-[11px] tracking-[0.3em] uppercase">
           © 2026 Yavuz Baris Özgün - The_Bozgun
         </footer>
       </div>
