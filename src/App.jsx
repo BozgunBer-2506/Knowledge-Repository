@@ -4,16 +4,16 @@ const projects = [
   {
     id: 'linux-system',
     title: 'CORE.LINUX.SYS',
-    description: 'Kernel optimization, shell architectures, and filesystem hierarchy.',
+    description: 'Kernel optimization, system administration and shell architectures.',
     url: 'https://linux-rehberi-tr.vercel.app',
     logo: 'https://cdn.simpleicons.org/linux/white'
   },
   {
     id: 'aws-infra',
     title: 'INFRA.AWS.CLOUD',
-    description: 'Scalable cloud nodes, VPC peering, and IAM security protocols.',
+    description: 'Global infrastructure, serverless solutions and cloud security.',
     url: 'https://aws-rehberi-tr.vercel.app',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg'
+    logo: 'https://cdn.simpleicons.org/amazons3/white'
   },
   {
     id: 'python-backend',
@@ -69,7 +69,7 @@ function App() {
               <div className="flex items-center justify-between mb-8">
                 <img src={project.logo} alt={project.title} className="w-10 h-10 object-contain opacity-20 group-hover:opacity-100 transition-all duration-500" />
                 <div className="text-[10px] font-black text-slate-700 group-hover:text-[#FF6B35] tracking-widest transition-colors">
-                  0x{Math.floor(Math.random() * 1000)}__RUN
+                  0x7FF_RUN
                 </div>
               </div>
 
