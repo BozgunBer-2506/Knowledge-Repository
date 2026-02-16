@@ -3,7 +3,7 @@
 A professional landing hub designed to showcase technical documentation modules developed during the **Agile Software Development & Cloud Engineering** program at **Syntax.de**.
 
 ## 🔗 Live Demo
-**Check out the live application here:** [https://knowledge-repository-alpha.vercel.app/](https://knowledge-repository-alpha.vercel.app/)
+[Check out the live application](https://knowledge-repository-ten.vercel.app/)
 
 ## 🛠 Tech Stack
 * **Framework:** React 19 (Vite)
