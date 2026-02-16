@@ -1,4 +1,8 @@
 import React from 'react';
+import LinuxLogo from '../images/Linux-removebg-preview.png';
+import AWSLogo from '../images/awsblck-removebg-preview.png';
+import PythonLogo from '../images/OIP-removebg-preview.png';
+import JSLogo from '../images/JS-removebg-preview.png';
 
 const guides = [
   { title: "Linux Engineering", logo: LinuxLogo, link: "https://linux-rehberi-tr.vercel.app/", tag: "Infrastructure" },
@@ -25,10 +29,9 @@ const EmailIcon = () => (
   </svg>
 );
 
-function App() {
+export default function App() {
   return (
     <div className="min-h-screen bg-[#0f172a] text-white font-sans selection:bg-emerald-500/30">
-
       <style>{`
         .goog-logo-link, .goog-te-gadget span, .goog-te-banner-frame { display: none !important; }
         .goog-te-gadget { color: transparent !important; font-size: 0 !important; }
@@ -59,7 +62,7 @@ function App() {
           <div className="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-emerald-400 uppercase bg-emerald-400/10 rounded-full italic">
             Technical Engineering Portfolio
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent italic">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 pb-4 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent italic leading-tight">
             Knowledge Repository
           </h1>
           <p className="text-slate-400 text-xl max-w-2xl mx-auto font-light leading-relaxed">
@@ -72,22 +75,19 @@ function App() {
             <a key={index} href={guide.link} target="_blank" rel="noreferrer"
               className="group relative flex flex-col bg-slate-800/40 border border-slate-700/50 p-8 rounded-3xl transition-all duration-300 hover:-translate-y-2 hover:border-emerald-500/50 hover:bg-slate-800 decoration-none">
               <div className="flex justify-between items-start mb-8">
-                <span className="text-5xl transform group-hover:scale-110 transition-transform">{guide.icon}</span>
+                <div className="w-14 h-14 flex items-center justify-center">
+                  <img
+                    src={guide.logo}
+                    alt={guide.title}
+                    className="w-full h-full object-contain transform group-hover:scale-110 transition-transform"
+                  />
+                </div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-900/80 px-2 py-1 rounded border border-slate-700">{guide.tag}</span>
               </div>
               <h3 className="text-2xl font-bold mb-8 group-hover:text-emerald-400 transition-colors">{guide.title}</h3>
               <div className="mt-auto flex items-center text-emerald-500 font-semibold text-xs tracking-widest uppercase italic">
                 Explore Module →
               </div>
-
-              <h3 className="text-lg font-black text-white mb-2 tracking-widest group-hover:translate-x-1 transition-transform">
-                {project.title}
-              </h3>
-              <p className="text-slate-500 text-xs leading-relaxed uppercase tracking-tight font-medium">
-                {project.description}
-              </p>
-
-              <div className="absolute bottom-0 left-0 w-full h-[2px] bg-slate-900 group-hover:bg-[#FF6B35] transition-colors"></div>
             </a>
           ))}
         </div>
@@ -96,15 +96,15 @@ function App() {
           <h2 className="text-2xl font-bold mb-8 italic text-slate-200 uppercase tracking-widest">Connect</h2>
           <div className="flex flex-wrap justify-center gap-6 mb-12">
             <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-8 py-3 bg-slate-900 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all hover:scale-105 group decoration-none">
-              <span className="text-xl">💻</span>
+              <GitHubIcon />
               <span className="font-bold text-white group-hover:text-emerald-400">GitHub</span>
             </a>
             <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-8 py-3 bg-slate-900 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all hover:scale-105 group decoration-none">
-              <span className="text-xl">🔗</span>
+              <LinkedInIcon />
               <span className="font-bold text-white group-hover:text-emerald-400">LinkedIn</span>
             </a>
             <a href="mailto:y.baris.ozgun@gmail.com" className="flex items-center gap-3 px-8 py-3 bg-slate-900 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all hover:scale-105 group decoration-none">
-              <span className="text-xl">📧</span>
+              <EmailIcon />
               <span className="font-bold text-white group-hover:text-emerald-400">Email</span>
             </a>
           </div>
@@ -128,5 +128,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
