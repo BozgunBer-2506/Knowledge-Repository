@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Search, Menu, Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
@@ -52,17 +51,16 @@ function App() {
       </header>
 
       <main className="max-w-6xl mx-auto p-8">
-        <div className="relative mb-12 max-w-md mx-auto">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-5 h-5" />
+        <div className="relative mb-12 max-w-md mx-auto text-center">
           <input
             type="text"
             placeholder="Proje ara..."
-            className="w-full bg-[#1e293b] border border-slate-700 rounded-xl py-4 pl-12 pr-4 focus:outline-none focus:border-[#FF6B35] transition-colors"
+            className="w-full bg-[#1e293b] border border-slate-700 rounded-xl py-4 px-6 focus:outline-none focus:border-[#FF6B35] transition-colors"
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <a
               key={project.id}
@@ -73,7 +71,7 @@ function App() {
             >
               <div className="flex items-start justify-between mb-6">
                 <img src={project.logo} alt={project.title} className="w-16 h-16 object-contain" />
-                <ExternalLink className="text-slate-600 group-hover:text-[#FF6B35] transition-colors" />
+                <span className="text-[#FF6B35] font-bold">GİT →</span>
               </div>
               <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
               <p className="text-slate-400">{project.description}</p>
