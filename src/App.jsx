@@ -1,8 +1,7 @@
-import React from 'react';
-import LinuxLogo from '../images/Linuxlogo.png';
-import AWSLogo from '../images/AWSlogo.png';
-import PythonLogo from '../images/Pythonlogo.png';
-import JSLogo from '../images/JSlogo.png';
+import LinuxLogo from './images/Linuxlogo.png';
+import AWSLogo from './images/AWSlogo.png';
+import PythonLogo from './images/Pythonlogo.png';
+import JSLogo from './images/JSlogo.png';
 
 const guides = [
   { title: "Linux Engineering", logo: LinuxLogo, link: "https://linux-rehberi-tr.vercel.app/", tag: "Infrastructure" },
