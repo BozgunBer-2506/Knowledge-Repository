@@ -2,10 +2,12 @@ import LinuxLogo from './images/Linuxlogo.png';
 import AWSLogo from './images/AWSlogo.png';
 import PythonLogo from './images/Pythonlogo.png';
 import JSLogo from './images/JSlogo.png';
+import DockerLogo from './images/Dockerlogo.png';
 
 const guides = [
   { title: "Linux Engineering", logo: LinuxLogo, link: "https://linux-rehberi-tr.vercel.app/", tag: "Infrastructure" },
   { title: "AWS Cloud Services", logo: AWSLogo, link: "https://aws-cloud-rehberi-tr.vercel.app/", tag: "DevOps" },
+  { title: "Docker Containerization", logo: DockerLogo, link: "https://docker-rehberi-tr.vercel.app/", tag: "DevOps" },
   { title: "Python Development", logo: PythonLogo, link: "https://python-rehberi-tr.vercel.app/", tag: "Backend" },
   { title: "JavaScript Standards", logo: JSLogo, link: "https://java-script-rehberi-tr.vercel.app/", tag: "Full-Stack" }
 ];
@@ -67,10 +69,11 @@ export default function App() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
+        {/* Improved Flex layout for perfect centering of 5 items */}
+        <div className="flex flex-wrap justify-center gap-6 my-8">
           {guides.map((guide, index) => (
             <a key={index} href={guide.link} target="_blank" rel="noreferrer"
-              className="group relative flex flex-col bg-slate-800/40 border border-slate-700/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/50 hover:bg-slate-800 decoration-none">
+              className="group relative flex flex-col bg-slate-800/40 border border-slate-700/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/50 hover:bg-slate-800 decoration-none w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[380px]">
               <div className="flex justify-between items-start mb-6">
                 <img src={guide.logo} alt={guide.title} className="w-12 h-12 object-contain transform group-hover:scale-110 transition-transform" />
                 <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-900/80 px-2 py-1 rounded border border-slate-700">{guide.tag}</span>
@@ -103,7 +106,7 @@ export default function App() {
         </section>
 
         <footer className="mt-12 text-center text-slate-500 text-[11px] tracking-[0.3em] uppercase">
-          © 2026 Yavuz Baris Özgün - The_Bozgun
+          © 2026 - The_Bozgun
         </footer>
       </div>
     </div>
