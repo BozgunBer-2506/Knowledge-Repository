@@ -94,13 +94,13 @@ export default function App() {
             <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-6 py-2.5 bg-slate-900 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all decoration-none">
               <LinkedInIcon /><span className="font-bold text-white text-sm">LinkedIn</span>
             </a>
-            <a href="mailto:y.baris.ozgun@gmail.com" className="flex items-center gap-3 px-6 py-2.5 bg-slate-900 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all decoration-none">
+            <a href="mailto:y.bozgun76@gmail.com" className="flex items-center gap-3 px-6 py-2.5 bg-slate-900 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all decoration-none">
               <EmailIcon /><span className="font-bold text-white text-sm">Email</span>
             </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left border-t border-slate-800 pt-6">
-            <p className="text-slate-400 text-xs font-light italic leading-relaxed">IHK Certified IT Support Specialist. Finalizing 9 months of Agile Software Development.</p>
+            <p className="text-slate-400 text-xs font-light italic leading-relaxed">IHK Certified IT Support Specialist. Finalizing 12 months of Agile Software Development.</p>
             <p className="text-slate-400 text-xs font-light italic leading-relaxed">Applying Scrum frameworks and Agile methodologies within WSL/Ubuntu environments.</p>
           </div>
         </section>
