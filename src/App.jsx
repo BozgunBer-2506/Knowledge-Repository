@@ -6,10 +6,10 @@ import DockerLogo from './images/Dockerlogo.png';
 
 const guides = [
   { title: "Linux Engineering", logo: LinuxLogo, link: "https://linux-rehberi-tr.vercel.app/", tag: "Infrastructure" },
-  { title: "AWS Cloud Services", logo: AWSLogo, link: "https://aws-cloud-rehberi-tr.vercel.app/", tag: "DevOps" },
+  { title: "AWS Cloud Services", logo: AWSLogo, link: "https://aws-cloud-rehberi-tr.vercel.app/", tag: "Cloud" },
   { title: "Docker Containerization", logo: DockerLogo, link: "https://docker-rehberi-tr.vercel.app/", tag: "DevOps" },
   { title: "Python Development", logo: PythonLogo, link: "https://python-rehberi-tr.vercel.app/", tag: "Backend" },
-  { title: "JavaScript Standards", logo: JSLogo, link: "https://java-script-rehberi-tr.vercel.app/", tag: "Full-Stack" }
+  { title: "JavaScript Standards", logo: JSLogo, link: "https://java-script-rehberi-tr.vercel.app/", tag: "Frontend" }
 ];
 
 const GitHubIcon = () => (
