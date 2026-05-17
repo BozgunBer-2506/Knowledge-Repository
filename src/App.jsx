@@ -98,17 +98,17 @@ export default function App() {
               href={guide.link}
               target="_blank"
               rel="noreferrer"
-              className="card-float group relative flex flex-col bg-white/[0.03] border border-white/[0.07] hover:border-blue-500/40 hover:bg-white/[0.05] p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/5 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] max-w-[340px] no-underline"
+              className="card-float group relative flex flex-col bg-white/[0.03] border border-white/[0.07] hover:border-blue-500/40 hover:bg-white/[0.05] p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/5 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] max-w-[360px] no-underline"
             >
               <div className="flex justify-between items-start mb-4">
-                <div className="w-10 h-10 flex items-center justify-center">
-                  <img src={guide.logo} alt={guide.title} className="w-9 h-9 object-contain transition-transform duration-300" />
+                <div className="w-12 h-12 flex items-center justify-center">
+                  <img src={guide.logo} alt={guide.title} className="w-10 h-10 object-contain transition-transform duration-300" />
                 </div>
                 <span className="text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md border" style={tagStyle}>
                   {guide.tag}
                 </span>
               </div>
-              <h3 className="text-sm font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">
+              <h3 className="text-base font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">
                 {guide.title}
               </h3>
               <p className="text-slate-500 text-xs leading-relaxed mb-4 flex-1">
