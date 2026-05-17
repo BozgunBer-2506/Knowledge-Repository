@@ -143,7 +143,9 @@ export default function App() {
               thebozgun.com
             </a>
           </div>
-          <p className="text-[10px] tracking-[0.2em] text-slate-600">© 2026 · IT Web</p>
+          <p className="text-[10px] tracking-[0.2em] text-slate-600">© 2026 · IT & Web ·{' '}
+            <a href="https://thebozgun.com" target="_blank" rel="noreferrer" className="no-underline hover:text-[#0099e6] transition-colors" style={{ color: '#0077B5' }}>thebozgun.com</a>
+          </p>
         </footer>
 
       </main>
