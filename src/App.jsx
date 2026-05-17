@@ -190,9 +190,9 @@ export default function App() {
               Privacy Policy
             </button>
           </div>
-          <p className="text-[10px] tracking-[0.2em] text-slate-300">
+          <p className="text-[10px] tracking-[0.2em] text-blue-500">
             © 2026 · IT & Web ·{' '}
-            <a href="https://thebozgun.com" target="_blank" rel="noreferrer" className="text-slate-300 no-underline hover:text-white transition-colors">
+            <a href="https://thebozgun.com" target="_blank" rel="noreferrer" className="text-blue-500 no-underline hover:text-blue-400 transition-colors">
               thebozgun.com
             </a>
           </p>
