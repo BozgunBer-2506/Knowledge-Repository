@@ -125,25 +125,25 @@ export default function App() {
         </div>
 
         {/* Footer */}
-        <footer className="border-t border-white/[0.06] mt-10 pt-5 pb-4 flex flex-col items-center gap-3">
-          <div className="flex items-center gap-3">
+        <footer className="border-t border-white/[0.05] mt-10 pt-6 pb-4 flex flex-col items-center gap-4">
+          <div className="flex items-center gap-8">
             <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline border"
-              style={{ backgroundColor: 'rgba(0,119,181,0.1)', borderColor: 'rgba(0,119,181,0.2)' }}>
+              className="flex items-center gap-1.5 text-slate-500 hover:text-slate-200 text-xs transition-colors duration-200 no-underline">
               <GitHubIcon /> GitHub
             </a>
+            <div className="w-px h-3 bg-white/10" />
             <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline border"
-              style={{ backgroundColor: 'rgba(0,119,181,0.1)', borderColor: 'rgba(0,119,181,0.2)' }}>
+              className="flex items-center gap-1.5 text-slate-500 hover:text-slate-200 text-xs transition-colors duration-200 no-underline">
               <LinkedInIcon /> LinkedIn
             </a>
+            <div className="w-px h-3 bg-white/10" />
             <a href="https://thebozgun.com" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline border"
-              style={{ backgroundColor: 'rgba(0,119,181,0.1)', borderColor: 'rgba(0,119,181,0.2)' }}>
+              className="text-xs font-medium transition-colors duration-200 no-underline hover:text-[#0099e6]"
+              style={{ color: '#0077B5' }}>
               thebozgun.com
             </a>
           </div>
-          <p className="text-[11px] tracking-[0.3em]" style={{ color: '#38bdf8' }}>© 2026 · IT Web</p>
+          <p className="text-[10px] tracking-[0.2em] text-slate-600">© 2026 · IT Web</p>
         </footer>
 
       </main>
