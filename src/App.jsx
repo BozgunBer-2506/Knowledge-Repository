@@ -130,15 +130,15 @@ export default function App() {
         <section className="border-t border-white/[0.06] pt-5 flex flex-col items-center gap-3">
           <div className="flex items-center gap-3">
             <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/10 border border-[#0077B5]/20 hover:border-[#0077B5]/50 hover:text-[#0077B5] rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
               <GitHubIcon /> GitHub
             </a>
             <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/10 border border-[#0077B5]/20 hover:border-[#0077B5]/50 hover:text-[#0077B5] rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
               <LinkedInIcon /> LinkedIn
             </a>
             <a href="https://thebozgun.com" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/10 border border-[#0077B5]/20 hover:border-[#0077B5]/50 hover:text-[#0077B5] rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
               thebozgun.com
             </a>
           </div>
