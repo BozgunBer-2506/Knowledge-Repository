@@ -43,11 +43,11 @@ const guides = [
 ];
 
 const tagColors = {
-  Infrastructure: "text-yellow-400 bg-yellow-400/10 border-yellow-400/20",
-  Cloud: "text-orange-400 bg-orange-400/10 border-orange-400/20",
-  DevOps: "text-blue-400 bg-blue-400/10 border-blue-400/20",
-  Backend: "text-cyan-400 bg-cyan-400/10 border-cyan-400/20",
-  Frontend: "text-purple-400 bg-purple-400/10 border-purple-400/20",
+  Infrastructure: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
+  Cloud: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
+  DevOps: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
+  Backend: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
+  Frontend: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
 };
 
 const GitHubIcon = () => (
