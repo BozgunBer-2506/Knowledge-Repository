@@ -14,6 +14,7 @@ A professional landing hub designed to showcase technical documentation modules 
 ## 📚 Included Modules
 - **Linux Engineering:** Shell scripting, security, and CLI essentials.
 - **AWS Cloud Services:** Infrastructure as Code and cloud architecture.
+- **Docker Containerization:** Containers, images, Compose, and deployment workflows.
 - **Python Development:** Backend logic and FastAPI implementation.
 - **JavaScript Standards:** Modern ES6+ and asynchronous patterns.
 

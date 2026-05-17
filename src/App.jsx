@@ -5,110 +5,175 @@ import JSLogo from './images/JSlogo.png';
 import DockerLogo from './images/Dockerlogo.png';
 
 const guides = [
-  { title: "Linux Engineering", logo: LinuxLogo, link: "https://linux-rehberi-tr.vercel.app/", tag: "Infrastructure" },
-  { title: "AWS Cloud Services", logo: AWSLogo, link: "https://aws-cloud-rehberi-tr.vercel.app/", tag: "Cloud" },
-  { title: "Docker Containerization", logo: DockerLogo, link: "https://docker-rehberi-tr.vercel.app/", tag: "DevOps" },
-  { title: "Python Development", logo: PythonLogo, link: "https://python-rehberi-tr.vercel.app/", tag: "Backend" },
-  { title: "JavaScript Standards", logo: JSLogo, link: "https://java-script-rehberi-tr.vercel.app/", tag: "Frontend" }
+  {
+    title: "Linux Engineering",
+    logo: LinuxLogo,
+    link: "https://linux-rehberi-tr.vercel.app/",
+    tag: "Infrastructure",
+    description: "Shell scripting, file system, permissions, process management, and CLI mastery."
+  },
+  {
+    title: "AWS Cloud Services",
+    logo: AWSLogo,
+    link: "https://aws-cloud-rehberi-tr.vercel.app/",
+    tag: "Cloud",
+    description: "EC2, S3, RDS, IAM, VPC and core cloud architecture patterns on AWS."
+  },
+  {
+    title: "Docker Containerization",
+    logo: DockerLogo,
+    link: "https://docker-rehberi-tr.vercel.app/",
+    tag: "DevOps",
+    description: "Container fundamentals, Dockerfile, Compose, volumes and deployment workflows."
+  },
+  {
+    title: "Python Development",
+    logo: PythonLogo,
+    link: "https://python-rehberi-tr.vercel.app/",
+    tag: "Backend",
+    description: "Core Python, web development with FastAPI, and automation scripting."
+  },
+  {
+    title: "JavaScript Standards",
+    logo: JSLogo,
+    link: "https://java-script-rehberi-tr.vercel.app/",
+    tag: "Frontend",
+    description: "Modern ES6+, async/await, DOM manipulation, and JavaScript patterns."
+  }
 ];
 
+const tagColors = {
+  Infrastructure: "text-yellow-400 bg-yellow-400/10 border-yellow-400/20",
+  Cloud: "text-orange-400 bg-orange-400/10 border-orange-400/20",
+  DevOps: "text-blue-400 bg-blue-400/10 border-blue-400/20",
+  Backend: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
+  Frontend: "text-purple-400 bg-purple-400/10 border-purple-400/20",
+};
+
 const GitHubIcon = () => (
-  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
+  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
 );
 
 const LinkedInIcon = () => (
-  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
 );
 
-const EmailIcon = () => (
-  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+const ArrowIcon = () => (
+  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8h10M9 4l4 4-4 4" /></svg>
 );
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white font-sans selection:bg-emerald-500/30 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-[#080d1a] text-white font-sans selection:bg-emerald-500/30 flex flex-col overflow-x-hidden">
       <style>{`
         .goog-logo-link, .goog-te-gadget span, .goog-te-banner-frame { display: none !important; }
         .goog-te-gadget { color: transparent !important; font-size: 0 !important; }
-        .goog-te-combo { 
-          background-color: rgba(30, 41, 59, 0.7) !important; 
-          color: #10b981 !important; 
-          border: 1px solid rgba(16, 185, 129, 0.3) !important; 
-          border-radius: 8px !important; 
+        .goog-te-combo {
+          background-color: rgba(15, 23, 42, 0.8) !important;
+          color: #10b981 !important;
+          border: 1px solid rgba(16, 185, 129, 0.25) !important;
+          border-radius: 6px !important;
           padding: 4px 10px !important;
-          font-size: 12px !important;
+          font-size: 11px !important;
           outline: none !important;
         }
         body { top: 0px !important; position: static !important; }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        .card-float:hover img { animation: float 2s ease-in-out infinite; }
       `}</style>
 
-      <nav className="sticky top-0 z-50 bg-[#1e293b]/80 backdrop-blur-md border-b border-slate-700 py-3 px-8 flex justify-between items-center shrink-0">
-        <span className="text-[11px] text-slate-400 uppercase tracking-[0.2em] font-bold italic">Knowledge Repository</span>
-        <div id="google_translate_element"></div>
+      {/* Ambient background */}
+      <div className="fixed inset-0 pointer-events-none -z-10">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[120px]" />
+      </div>
+
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 bg-[#080d1a]/80 backdrop-blur-xl border-b border-white/[0.06] py-3 px-6 flex justify-between items-center">
+        <div className="flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="text-[11px] text-slate-400 uppercase tracking-[0.2em] font-semibold">Knowledge Repository</span>
+        </div>
+        <div id="google_translate_element" />
       </nav>
 
-      <div className="flex-1 flex flex-col justify-evenly max-w-7xl mx-auto px-8 py-6 w-full">
-        <header className="text-center">
-          <div className="inline-block px-4 py-1.5 mb-4 text-xs font-medium tracking-wider text-emerald-400 uppercase bg-emerald-400/10 rounded-full italic">Technical Engineering Portfolio</div>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 pb-4 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent italic leading-tight">
-            Knowledge Repository
-          </h1>
-          <div style={{
-            fontSize: '0.85rem',
-            color: '#00ffaa',
-            fontWeight: '700',
-            letterSpacing: '2px',
-            textTransform: 'uppercase',
-            margin: '15px 0',
-            opacity: '0.9'
-          }}>
-            TR CONTENT <span style={{ color: '#fff', margin: '0 8px', opacity: '0.5' }}>•</span> MULTILINGUAL SUPPORT COMING SOON
+      <main className="flex-1 max-w-6xl mx-auto px-6 py-16 w-full">
+
+        {/* Hero */}
+        <header className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-emerald-400 uppercase bg-emerald-400/8 border border-emerald-400/15 rounded-full">
+            <span className="w-1 h-1 rounded-full bg-emerald-400" />
+            Agile Software Development & Cloud Engineering
           </div>
-          <p className="text-slate-400 text-lg max-w-3xl mx-auto font-light">
-            Interactive technical guides for Agile Software Development & Cloud Engineering.
+          <h1 className="text-5xl md:text-7xl font-black mb-5 bg-gradient-to-b from-white via-white to-slate-500 bg-clip-text text-transparent leading-[1.05] tracking-tight">
+            Knowledge<br />Repository
+          </h1>
+          <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
+            Five technical guides covering the full stack - from Linux infrastructure to cloud deployment, written in Turkish.
           </p>
         </header>
 
-        {/* Improved Flex layout for perfect centering of 5 items */}
-        <div className="flex flex-wrap justify-center gap-6 my-8">
+        {/* Guide Cards */}
+        <div className="flex flex-wrap justify-center gap-5 mb-20">
           {guides.map((guide, index) => (
-            <a key={index} href={guide.link} target="_blank" rel="noreferrer"
-              className="group relative flex flex-col bg-slate-800/40 border border-slate-700/50 p-6 rounded-3xl transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/50 hover:bg-slate-800 decoration-none w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[380px]">
-              <div className="flex justify-between items-start mb-6">
-                <img src={guide.logo} alt={guide.title} className="w-12 h-12 object-contain transform group-hover:scale-110 transition-transform" />
-                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-900/80 px-2 py-1 rounded border border-slate-700">{guide.tag}</span>
+            <a
+              key={index}
+              href={guide.link}
+              target="_blank"
+              rel="noreferrer"
+              className="card-float group relative flex flex-col bg-white/[0.03] border border-white/[0.07] hover:border-emerald-500/40 hover:bg-white/[0.05] p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-emerald-500/5 w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[360px] no-underline"
+            >
+              <div className="flex justify-between items-start mb-5">
+                <div className="w-12 h-12 flex items-center justify-center">
+                  <img src={guide.logo} alt={guide.title} className="w-10 h-10 object-contain transition-transform duration-300" />
+                </div>
+                <span className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border ${tagColors[guide.tag]}`}>
+                  {guide.tag}
+                </span>
               </div>
-              <h3 className="text-xl font-bold mb-6 group-hover:text-emerald-400 transition-colors">{guide.title}</h3>
-              <div className="mt-auto flex items-center text-emerald-500 font-semibold text-[11px] tracking-widest uppercase italic">
-                Explore Module →
+              <h3 className="text-base font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors duration-200">
+                {guide.title}
+              </h3>
+              <p className="text-slate-500 text-xs leading-relaxed mb-5 flex-1">
+                {guide.description}
+              </p>
+              <div className="flex items-center gap-1.5 text-emerald-500 group-hover:text-emerald-400 text-xs font-semibold tracking-wider uppercase transition-colors">
+                Explore
+                <span className="transition-transform duration-200 group-hover:translate-x-1">
+                  <ArrowIcon />
+                </span>
               </div>
             </a>
           ))}
         </div>
 
-        <section className="bg-slate-800/20 border border-slate-700/30 rounded-3xl p-8 text-center max-w-5xl mx-auto w-full">
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-6 py-2.5 bg-slate-900 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all decoration-none">
-              <GitHubIcon /><span className="font-bold text-white text-sm">GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer" className="flex items-center gap-3 px-6 py-2.5 bg-slate-900 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all decoration-none">
-              <LinkedInIcon /><span className="font-bold text-white text-sm">LinkedIn</span>
-            </a>
-            <a href="mailto:y.bozgun76@gmail.com" className="flex items-center gap-3 px-6 py-2.5 bg-slate-900 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all decoration-none">
-              <EmailIcon /><span className="font-bold text-white text-sm">Email</span>
-            </a>
+        {/* Footer section */}
+        <section className="border-t border-white/[0.06] pt-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <p className="text-white font-semibold text-sm mb-1">Yavuz Baris Ozgun</p>
+            <p className="text-slate-500 text-xs">IHK Certified IT Support Specialist</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left border-t border-slate-800 pt-6">
-            <p className="text-slate-400 text-xs font-light italic leading-relaxed">IHK Certified IT Support Specialist. Finalizing 12 months of Agile Software Development.</p>
-            <p className="text-slate-400 text-xs font-light italic leading-relaxed">Applying Scrum frameworks and Agile methodologies within WSL/Ubuntu environments.</p>
+          <div className="flex items-center gap-3">
+            <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-emerald-500/40 hover:text-emerald-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              <GitHubIcon /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-emerald-500/40 hover:text-emerald-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              <LinkedInIcon /> LinkedIn
+            </a>
+            <a href="https://thebozgun.com" target="_blank" rel="noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/25 hover:border-emerald-500/60 hover:bg-emerald-500/15 text-emerald-400 rounded-xl text-xs font-medium transition-all duration-200 no-underline">
+              thebozgun.com
+            </a>
           </div>
         </section>
 
-        <footer className="mt-12 text-center text-slate-500 text-[11px] tracking-[0.3em] uppercase">
-          © 2026 - The_Bozgun
-        </footer>
-      </div>
+        <p className="text-center text-slate-700 text-[11px] tracking-[0.3em] uppercase mt-10">
+          © 2026 The_Bozgun
+        </p>
+
+      </main>
     </div>
   );
 }
