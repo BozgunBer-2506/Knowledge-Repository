@@ -69,14 +69,21 @@ export default function App() {
         .goog-logo-link, .goog-te-gadget span, .goog-te-banner-frame { display: none !important; }
         .goog-te-gadget { color: transparent !important; font-size: 0 !important; }
         .goog-te-combo {
-          background-color: rgba(15, 23, 42, 0.8) !important;
-          color: #10b981 !important;
-          border: 1px solid rgba(16, 185, 129, 0.25) !important;
-          border-radius: 6px !important;
-          padding: 4px 10px !important;
+          background: transparent !important;
+          color: #475569 !important;
+          border: none !important;
+          border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+          border-radius: 0 !important;
+          padding: 2px 6px !important;
           font-size: 11px !important;
+          font-family: inherit !important;
+          letter-spacing: 0.05em !important;
           outline: none !important;
+          cursor: pointer !important;
+          -webkit-appearance: none !important;
+          appearance: none !important;
         }
+        .goog-te-combo:hover { color: #10b981 !important; border-bottom-color: rgba(16,185,129,0.3) !important; }
         body { top: 0px !important; position: static !important; }
         @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
         .card-float:hover img { animation: float 2s ease-in-out infinite; }
@@ -148,11 +155,7 @@ export default function App() {
         </div>
 
         {/* Footer section */}
-        <section className="border-t border-white/[0.06] pt-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="text-white font-semibold text-sm mb-1">Yavuz Baris Ozgun</p>
-            <p className="text-slate-500 text-xs">IHK Certified IT Support Specialist</p>
-          </div>
+        <section className="border-t border-white/[0.06] pt-10 flex flex-col items-center gap-5">
           <div className="flex items-center gap-3">
             <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-emerald-500/40 hover:text-emerald-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
@@ -167,11 +170,8 @@ export default function App() {
               thebozgun.com
             </a>
           </div>
+          <p className="text-slate-700 text-[11px] tracking-[0.3em] uppercase">© 2026</p>
         </section>
-
-        <p className="text-center text-slate-700 text-[11px] tracking-[0.3em] uppercase mt-10">
-          © 2026 <a href="https://thebozgun.com" target="_blank" rel="noreferrer" className="hover:text-slate-500 transition-colors no-underline">thebozgun.com</a>
-        </p>
 
       </main>
     </div>
