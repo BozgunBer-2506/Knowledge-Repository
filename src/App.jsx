@@ -42,12 +42,10 @@ const guides = [
   }
 ];
 
-const tagColors = {
-  Infrastructure: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
-  Cloud: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
-  DevOps: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
-  Backend: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
-  Frontend: "text-[#0077B5] bg-[#0077B5]/10 border-[#0077B5]/20",
+const tagStyle = {
+  color: '#0077B5',
+  backgroundColor: 'rgba(0,119,181,0.1)',
+  borderColor: 'rgba(0,119,181,0.2)',
 };
 
 const GitHubIcon = () => (
@@ -106,7 +104,7 @@ export default function App() {
                 <div className="w-10 h-10 flex items-center justify-center">
                   <img src={guide.logo} alt={guide.title} className="w-9 h-9 object-contain transition-transform duration-300" />
                 </div>
-                <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md border ${tagColors[guide.tag]}`}>
+                <span className="text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md border" style={tagStyle}>
                   {guide.tag}
                 </span>
               </div>
