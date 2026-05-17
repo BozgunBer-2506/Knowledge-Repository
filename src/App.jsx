@@ -6,13 +6,6 @@ import DockerLogo from './images/Dockerlogo.png';
 
 const guides = [
   {
-    title: "Linux Engineering",
-    logo: LinuxLogo,
-    link: "https://linux-rehberi-tr.vercel.app/",
-    tag: "Infrastructure",
-    description: "Shell scripting, file system, permissions, process management, and CLI mastery."
-  },
-  {
     title: "AWS Cloud Services",
     logo: AWSLogo,
     link: "https://aws-cloud-rehberi-tr.vercel.app/",
@@ -27,18 +20,25 @@ const guides = [
     description: "Container fundamentals, Dockerfile, Compose, volumes and deployment workflows."
   },
   {
-    title: "Python Development",
-    logo: PythonLogo,
-    link: "https://python-rehberi-tr.vercel.app/",
-    tag: "Backend",
-    description: "Core Python, web development with FastAPI, and automation scripting."
-  },
-  {
     title: "JavaScript Standards",
     logo: JSLogo,
     link: "https://java-script-rehberi-tr.vercel.app/",
     tag: "Frontend",
     description: "Modern ES6+, async/await, DOM manipulation, and JavaScript patterns."
+  },
+  {
+    title: "Linux Engineering",
+    logo: LinuxLogo,
+    link: "https://linux-rehberi-tr.vercel.app/",
+    tag: "Infrastructure",
+    description: "Shell scripting, file system, permissions, process management, and CLI mastery."
+  },
+  {
+    title: "Python Development",
+    logo: PythonLogo,
+    link: "https://python-rehberi-tr.vercel.app/",
+    tag: "Backend",
+    description: "Core Python, web development with FastAPI, and automation scripting."
   }
 ];
 
