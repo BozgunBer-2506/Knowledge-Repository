@@ -46,7 +46,7 @@ const tagColors = {
   Infrastructure: "text-yellow-400 bg-yellow-400/10 border-yellow-400/20",
   Cloud: "text-orange-400 bg-orange-400/10 border-orange-400/20",
   DevOps: "text-blue-400 bg-blue-400/10 border-blue-400/20",
-  Backend: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
+  Backend: "text-cyan-400 bg-cyan-400/10 border-cyan-400/20",
   Frontend: "text-purple-400 bg-purple-400/10 border-purple-400/20",
 };
 
@@ -64,7 +64,7 @@ const ArrowIcon = () => (
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#080d1a] text-white font-sans selection:bg-emerald-500/30 flex flex-col overflow-x-hidden">
+    <div className="min-h-screen bg-[#080d1a] text-white font-sans selection:bg-blue-500/30 flex flex-col overflow-x-hidden">
       <style>{`
         @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
         .card-float:hover img { animation: float 2s ease-in-out infinite; }
@@ -72,16 +72,16 @@ export default function App() {
 
       {/* Ambient background */}
       <div className="fixed inset-0 pointer-events-none -z-10">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[120px]" />
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/6 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-indigo-600/6 rounded-full blur-[120px]" />
       </div>
 
-<main className="flex-1 max-w-6xl mx-auto px-6 py-16 w-full">
+      <main className="flex-1 max-w-6xl mx-auto px-6 py-16 w-full">
 
         {/* Hero */}
         <header className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-emerald-400 uppercase bg-emerald-400/8 border border-emerald-400/15 rounded-full">
-            <span className="w-1 h-1 rounded-full bg-emerald-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-blue-400 uppercase bg-blue-400/8 border border-blue-400/15 rounded-full">
+            <span className="w-1 h-1 rounded-full bg-blue-400" />
             Agile Software Development & Cloud Engineering
           </div>
           <h1 className="text-5xl md:text-7xl font-black mb-5 bg-gradient-to-b from-white via-white to-slate-500 bg-clip-text text-transparent leading-[1.05] tracking-tight">
@@ -100,7 +100,7 @@ export default function App() {
               href={guide.link}
               target="_blank"
               rel="noreferrer"
-              className="card-float group relative flex flex-col bg-white/[0.03] border border-white/[0.07] hover:border-emerald-500/40 hover:bg-white/[0.05] p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-emerald-500/5 w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[360px] no-underline"
+              className="card-float group relative flex flex-col bg-white/[0.03] border border-white/[0.07] hover:border-blue-500/40 hover:bg-white/[0.05] p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-500/5 w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[360px] no-underline"
             >
               <div className="flex justify-between items-start mb-5">
                 <div className="w-12 h-12 flex items-center justify-center">
@@ -110,13 +110,13 @@ export default function App() {
                   {guide.tag}
                 </span>
               </div>
-              <h3 className="text-base font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors duration-200">
+              <h3 className="text-base font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">
                 {guide.title}
               </h3>
               <p className="text-slate-500 text-xs leading-relaxed mb-5 flex-1">
                 {guide.description}
               </p>
-              <div className="flex items-center gap-1.5 text-emerald-500 group-hover:text-emerald-400 text-xs font-semibold tracking-wider uppercase transition-colors">
+              <div className="flex items-center gap-1.5 text-blue-500 group-hover:text-blue-400 text-xs font-semibold tracking-wider uppercase transition-colors">
                 Explore
                 <span className="transition-transform duration-200 group-hover:translate-x-1">
                   <ArrowIcon />
@@ -130,15 +130,15 @@ export default function App() {
         <section className="border-t border-white/[0.06] pt-10 flex flex-col items-center gap-5">
           <div className="flex items-center gap-3">
             <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-emerald-500/40 hover:text-emerald-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
               <GitHubIcon /> GitHub
             </a>
             <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-emerald-500/40 hover:text-emerald-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
               <LinkedInIcon /> LinkedIn
             </a>
             <a href="https://thebozgun.com" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-emerald-500/40 hover:text-emerald-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
               thebozgun.com
             </a>
           </div>
