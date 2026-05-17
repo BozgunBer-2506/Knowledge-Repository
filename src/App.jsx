@@ -76,7 +76,7 @@ export default function App() {
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-indigo-600/6 rounded-full blur-[120px]" />
       </div>
 
-      <main className="flex-1 max-w-6xl mx-auto px-6 w-full flex flex-col justify-center py-10">
+      <main className="flex-1 max-w-6xl mx-auto px-6 w-full flex flex-col py-10">
 
         {/* Hero */}
         <header className="text-center mb-10">
