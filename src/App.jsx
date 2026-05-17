@@ -170,7 +170,7 @@ export default function App() {
         </section>
 
         <p className="text-center text-slate-700 text-[11px] tracking-[0.3em] uppercase mt-10">
-          © 2026 The_Bozgun
+          © 2026 <a href="https://thebozgun.com" target="_blank" rel="noreferrer" className="hover:text-slate-500 transition-colors no-underline">thebozgun.com</a>
         </p>
 
       </main>
