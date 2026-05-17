@@ -76,15 +76,15 @@ export default function App() {
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-indigo-600/6 rounded-full blur-[120px]" />
       </div>
 
-      <main className="flex-1 max-w-6xl mx-auto px-6 py-6 w-full">
+      <main className="flex-1 max-w-6xl mx-auto px-6 w-full flex flex-col justify-center py-10">
 
         {/* Hero */}
-        <header className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-[10px] font-semibold tracking-widest text-blue-400 uppercase bg-blue-400/8 border border-blue-400/15 rounded-full">
+        <header className="text-center mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-[10px] font-semibold tracking-widest text-blue-400 uppercase bg-blue-400/8 border border-blue-400/15 rounded-full">
             <span className="w-1 h-1 rounded-full bg-blue-400" />
             Agile Software Development & Cloud Engineering
           </div>
-          <h1 className="text-4xl md:text-5xl font-black mb-3 bg-gradient-to-b from-white via-white to-slate-500 bg-clip-text text-transparent leading-[1.05] tracking-tight">
+          <h1 className="text-5xl md:text-6xl font-black mb-4 bg-gradient-to-b from-white via-white to-slate-500 bg-clip-text text-transparent leading-[1.05] tracking-tight">
             Knowledge Repository
           </h1>
           <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed font-light">
@@ -93,27 +93,27 @@ export default function App() {
         </header>
 
         {/* Guide Cards */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
           {guides.map((guide, index) => (
             <a
               key={index}
               href={guide.link}
               target="_blank"
               rel="noreferrer"
-              className="card-float group relative flex flex-col bg-white/[0.03] border border-white/[0.07] hover:border-blue-500/40 hover:bg-white/[0.05] p-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/5 w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] max-w-[340px] no-underline"
+              className="card-float group relative flex flex-col bg-white/[0.03] border border-white/[0.07] hover:border-blue-500/40 hover:bg-white/[0.05] p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/5 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)] max-w-[340px] no-underline"
             >
-              <div className="flex justify-between items-start mb-3">
-                <div className="w-9 h-9 flex items-center justify-center">
-                  <img src={guide.logo} alt={guide.title} className="w-8 h-8 object-contain transition-transform duration-300" />
+              <div className="flex justify-between items-start mb-4">
+                <div className="w-10 h-10 flex items-center justify-center">
+                  <img src={guide.logo} alt={guide.title} className="w-9 h-9 object-contain transition-transform duration-300" />
                 </div>
                 <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md border ${tagColors[guide.tag]}`}>
                   {guide.tag}
                 </span>
               </div>
-              <h3 className="text-sm font-bold text-white mb-1.5 group-hover:text-blue-400 transition-colors duration-200">
+              <h3 className="text-sm font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">
                 {guide.title}
               </h3>
-              <p className="text-slate-500 text-xs leading-relaxed mb-3 flex-1">
+              <p className="text-slate-500 text-xs leading-relaxed mb-4 flex-1">
                 {guide.description}
               </p>
               <div className="flex items-center gap-1.5 text-blue-500 group-hover:text-blue-400 text-xs font-semibold tracking-wider uppercase transition-colors">
