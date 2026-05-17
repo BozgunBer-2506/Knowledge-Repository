@@ -93,7 +93,7 @@ export default function App() {
         </header>
 
         {/* Guide Cards */}
-        <div className="flex flex-wrap justify-center gap-5 mb-20">
+        <div className="flex flex-wrap justify-center gap-5 mb-10">
           {guides.map((guide, index) => (
             <a
               key={index}
@@ -127,8 +127,8 @@ export default function App() {
         </div>
 
         {/* Footer section */}
-        <section className="border-t border-white/[0.06] pt-10 flex justify-center">
-          <p className="text-slate-700 text-[11px] tracking-[0.3em] uppercase">© 2026 · IT Web · thebozgun.com</p>
+        <section className="border-t border-white/[0.06] pt-6 pb-2 flex justify-center">
+          <p className="text-slate-600 text-[10px] tracking-[0.25em] uppercase">© 2026 · IT Web · thebozgun.com</p>
         </section>
 
       </main>
