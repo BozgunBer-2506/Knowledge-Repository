@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import LinuxLogo from './images/Linuxlogo.png';
 import AWSLogo from './images/AWSlogo.png';
 import PythonLogo from './images/Pythonlogo.png';
@@ -60,7 +61,54 @@ const ArrowIcon = () => (
   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 16 16" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M3 8h10M9 4l4 4-4 4" /></svg>
 );
 
+const CloseIcon = () => (
+  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+);
+
+function PrivacyModal({ onClose }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4" onClick={onClose}>
+      <div className="relative bg-[#0d1526] border border-white/[0.08] rounded-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-8" onClick={e => e.stopPropagation()}>
+        <button onClick={onClose} className="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors">
+          <CloseIcon />
+        </button>
+        <h2 className="text-lg font-bold text-white mb-1">Privacy Policy</h2>
+        <p className="text-slate-600 text-xs mb-6">Last updated: May 2026</p>
+
+        <div className="space-y-5 text-sm text-slate-400 leading-relaxed">
+          <section>
+            <h3 className="text-white font-semibold mb-1">1. About This Site</h3>
+            <p>Knowledge Repository is a static documentation hub built and maintained by <a href="https://thebozgun.com" target="_blank" rel="noreferrer" className="text-[#0077B5] hover:underline">thebozgun.com</a>. It links to five technical guides written in Turkish covering Linux, AWS, Docker, Python, and JavaScript.</p>
+          </section>
+
+          <section>
+            <h3 className="text-white font-semibold mb-1">2. Data Collection</h3>
+            <p>This site does not collect, store, or process any personal data. There are no forms, accounts, or tracking scripts. No cookies are used.</p>
+          </section>
+
+          <section>
+            <h3 className="text-white font-semibold mb-1">3. External Links</h3>
+            <p>This site links to external guides hosted on Vercel. Once you leave this page, the privacy policy of the destination site applies. We are not responsible for external content.</p>
+          </section>
+
+          <section>
+            <h3 className="text-white font-semibold mb-1">4. Hosting</h3>
+            <p>This site is hosted on Vercel. Vercel may collect standard server logs (IP address, browser type, page requests) as part of their infrastructure. See <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noreferrer" className="text-[#0077B5] hover:underline">Vercel's Privacy Policy</a> for details.</p>
+          </section>
+
+          <section>
+            <h3 className="text-white font-semibold mb-1">5. Contact</h3>
+            <p>For any privacy-related questions, reach out at <a href="mailto:contact@thebozgun.com" className="text-[#0077B5] hover:underline">contact@thebozgun.com</a>.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
+  const [showPrivacy, setShowPrivacy] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#080d1a] text-white font-sans selection:bg-blue-500/30 flex flex-col overflow-x-hidden">
       <style>{`
@@ -137,18 +185,22 @@ export default function App() {
               <LinkedInIcon /> LinkedIn
             </a>
             <div className="w-px h-3 bg-white/10" />
-            <a href="https://thebozgun.com" target="_blank" rel="noreferrer"
-              className="text-xs font-medium transition-colors duration-200 no-underline hover:text-[#0099e6]"
-              style={{ color: '#0077B5' }}>
+            <button onClick={() => setShowPrivacy(true)}
+              className="text-slate-500 hover:text-slate-200 text-xs transition-colors duration-200 cursor-pointer bg-transparent border-none">
+              Privacy Policy
+            </button>
+          </div>
+          <p className="text-[10px] tracking-[0.2em]" style={{ color: '#4a90b8' }}>
+            © 2026 · IT & Web ·{' '}
+            <a href="https://thebozgun.com" target="_blank" rel="noreferrer" className="no-underline hover:text-[#0099e6] transition-colors" style={{ color: '#4a90b8' }}>
               thebozgun.com
             </a>
-          </div>
-          <p className="text-[10px] tracking-[0.2em] text-slate-600">© 2026 · IT & Web ·{' '}
-            <a href="https://thebozgun.com" target="_blank" rel="noreferrer" className="no-underline hover:text-[#0099e6] transition-colors" style={{ color: '#0077B5' }}>thebozgun.com</a>
           </p>
         </footer>
 
       </main>
+
+      {showPrivacy && <PrivacyModal onClose={() => setShowPrivacy(false)} />}
     </div>
   );
 }
