@@ -166,11 +166,11 @@ export default function App() {
               <LinkedInIcon /> LinkedIn
             </a>
             <a href="https://thebozgun.com" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/25 hover:border-emerald-500/60 hover:bg-emerald-500/15 text-emerald-400 rounded-xl text-xs font-medium transition-all duration-200 no-underline">
+              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-emerald-500/40 hover:text-emerald-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
               thebozgun.com
             </a>
           </div>
-          <p className="text-slate-700 text-[11px] tracking-[0.3em] uppercase">© 2026</p>
+          <p className="text-slate-700 text-[11px] tracking-[0.3em] uppercase">© 2026 · IT Web · thebozgun.com</p>
         </section>
 
       </main>
