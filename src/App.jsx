@@ -66,25 +66,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#080d1a] text-white font-sans selection:bg-emerald-500/30 flex flex-col overflow-x-hidden">
       <style>{`
-        .goog-logo-link, .goog-te-gadget span, .goog-te-banner-frame { display: none !important; }
-        .goog-te-gadget { color: transparent !important; font-size: 0 !important; }
-        .goog-te-combo {
-          background: transparent !important;
-          color: #475569 !important;
-          border: none !important;
-          border-bottom: 1px solid rgba(255,255,255,0.08) !important;
-          border-radius: 0 !important;
-          padding: 2px 6px !important;
-          font-size: 11px !important;
-          font-family: inherit !important;
-          letter-spacing: 0.05em !important;
-          outline: none !important;
-          cursor: pointer !important;
-          -webkit-appearance: none !important;
-          appearance: none !important;
-        }
-        .goog-te-combo:hover { color: #10b981 !important; border-bottom-color: rgba(16,185,129,0.3) !important; }
-        body { top: 0px !important; position: static !important; }
         @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
         .card-float:hover img { animation: float 2s ease-in-out infinite; }
       `}</style>
@@ -101,7 +82,6 @@ export default function App() {
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           <span className="text-[11px] text-slate-400 uppercase tracking-[0.2em] font-semibold">Knowledge Repository</span>
         </div>
-        <div id="google_translate_element" />
       </nav>
 
       <main className="flex-1 max-w-6xl mx-auto px-6 py-16 w-full">
