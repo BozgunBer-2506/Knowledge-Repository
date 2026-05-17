@@ -93,7 +93,7 @@ export default function App() {
         </header>
 
         {/* Guide Cards */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-4">
           {guides.map((guide, index) => (
             <a
               key={index}
@@ -126,26 +126,25 @@ export default function App() {
           ))}
         </div>
 
-        {/* Footer section */}
-        <section className="border-t border-white/[0.06] pt-5 flex flex-col items-center gap-3">
-          <div className="flex items-center gap-3">
-            <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/10 border border-[#0077B5]/20 hover:border-[#0077B5]/50 hover:text-[#0077B5] rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
-              <GitHubIcon /> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/10 border border-[#0077B5]/20 hover:border-[#0077B5]/50 hover:text-[#0077B5] rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
-              <LinkedInIcon /> LinkedIn
-            </a>
-            <a href="https://thebozgun.com" target="_blank" rel="noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/10 border border-[#0077B5]/20 hover:border-[#0077B5]/50 hover:text-[#0077B5] rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
-              thebozgun.com
-            </a>
-          </div>
-          <p className="text-slate-700 text-[11px] tracking-[0.3em] uppercase">© 2026 · IT Web · thebozgun.com</p>
-        </section>
-
       </main>
+
+      <footer className="border-t border-white/[0.06] py-5 flex flex-col items-center gap-3">
+        <div className="flex items-center gap-3">
+          <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/10 border border-[#0077B5]/20 hover:border-[#0077B5]/50 hover:text-[#0077B5] rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+            <GitHubIcon /> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/10 border border-[#0077B5]/20 hover:border-[#0077B5]/50 hover:text-[#0077B5] rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+            <LinkedInIcon /> LinkedIn
+          </a>
+          <a href="https://thebozgun.com" target="_blank" rel="noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-[#0077B5]/10 border border-[#0077B5]/20 hover:border-[#0077B5]/50 hover:text-[#0077B5] rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+            thebozgun.com
+          </a>
+        </div>
+        <p className="text-slate-700 text-[11px] tracking-[0.3em] uppercase">© 2026 · IT Web · thebozgun.com</p>
+      </footer>
     </div>
   );
 }
