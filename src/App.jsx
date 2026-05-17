@@ -77,7 +77,7 @@ export default function App() {
       <main className="flex-1 max-w-6xl mx-auto px-6 w-full flex flex-col py-10">
 
         {/* Hero */}
-        <header className="text-center mb-10">
+        <header className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 text-[10px] font-semibold tracking-widest text-blue-400 uppercase bg-blue-400/8 border border-blue-400/15 rounded-full">
             <span className="w-1 h-1 rounded-full bg-blue-400" />
             Agile Software Development & Cloud Engineering
