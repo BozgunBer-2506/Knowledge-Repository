@@ -93,7 +93,7 @@ export default function App() {
         </header>
 
         {/* Guide Cards */}
-        <div className="flex flex-wrap justify-center gap-5 mb-10">
+        <div className="flex flex-wrap justify-center gap-5 mb-20">
           {guides.map((guide, index) => (
             <a
               key={index}
@@ -127,8 +127,22 @@ export default function App() {
         </div>
 
         {/* Footer section */}
-        <section className="border-t border-white/[0.06] pt-6 pb-2 flex justify-center">
-          <p className="text-slate-600 text-[10px] tracking-[0.25em] uppercase">© 2026 · IT Web · thebozgun.com</p>
+        <section className="border-t border-white/[0.06] pt-10 flex flex-col items-center gap-5">
+          <div className="flex items-center gap-3">
+            <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              <GitHubIcon /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/the-bozgun/" target="_blank" rel="noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              <LinkedInIcon /> LinkedIn
+            </a>
+            <a href="https://thebozgun.com" target="_blank" rel="noreferrer"
+              className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
+              thebozgun.com
+            </a>
+          </div>
+          <p className="text-slate-700 text-[11px] tracking-[0.3em] uppercase">© 2026 · IT Web · thebozgun.com</p>
         </section>
 
       </main>
