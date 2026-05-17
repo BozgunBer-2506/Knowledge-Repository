@@ -76,15 +76,7 @@ export default function App() {
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[120px]" />
       </div>
 
-      {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-[#080d1a]/80 backdrop-blur-xl border-b border-white/[0.06] py-3 px-6 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-[11px] text-slate-400 uppercase tracking-[0.2em] font-semibold">Knowledge Repository</span>
-        </div>
-      </nav>
-
-      <main className="flex-1 max-w-6xl mx-auto px-6 py-16 w-full">
+<main className="flex-1 max-w-6xl mx-auto px-6 py-16 w-full">
 
         {/* Hero */}
         <header className="text-center mb-20">
