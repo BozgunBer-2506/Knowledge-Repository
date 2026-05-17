@@ -143,7 +143,7 @@ export default function App() {
               thebozgun.com
             </a>
           </div>
-          <p className="text-slate-500 text-[11px] tracking-[0.3em]">© 2026 · IT Web · thebozgun.com</p>
+          <p className="text-[11px] tracking-[0.3em]" style={{ color: '#1e3a5f' }}>© 2026 · IT Web · thebozgun.com</p>
         </footer>
 
       </main>
