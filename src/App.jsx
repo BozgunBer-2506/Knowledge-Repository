@@ -76,44 +76,44 @@ export default function App() {
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-indigo-600/6 rounded-full blur-[120px]" />
       </div>
 
-      <main className="flex-1 max-w-6xl mx-auto px-6 py-16 w-full">
+      <main className="flex-1 max-w-6xl mx-auto px-6 py-6 w-full">
 
         {/* Hero */}
-        <header className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-blue-400 uppercase bg-blue-400/8 border border-blue-400/15 rounded-full">
+        <header className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 text-[10px] font-semibold tracking-widest text-blue-400 uppercase bg-blue-400/8 border border-blue-400/15 rounded-full">
             <span className="w-1 h-1 rounded-full bg-blue-400" />
             Agile Software Development & Cloud Engineering
           </div>
-          <h1 className="text-5xl md:text-7xl font-black mb-5 bg-gradient-to-b from-white via-white to-slate-500 bg-clip-text text-transparent leading-[1.05] tracking-tight">
-            Knowledge<br />Repository
+          <h1 className="text-4xl md:text-5xl font-black mb-3 bg-gradient-to-b from-white via-white to-slate-500 bg-clip-text text-transparent leading-[1.05] tracking-tight">
+            Knowledge Repository
           </h1>
-          <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed font-light">
             Five technical guides covering the full stack - from Linux infrastructure to cloud deployment, written in Turkish.
           </p>
         </header>
 
         {/* Guide Cards */}
-        <div className="flex flex-wrap justify-center gap-5 mb-20">
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           {guides.map((guide, index) => (
             <a
               key={index}
               href={guide.link}
               target="_blank"
               rel="noreferrer"
-              className="card-float group relative flex flex-col bg-white/[0.03] border border-white/[0.07] hover:border-blue-500/40 hover:bg-white/[0.05] p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-blue-500/5 w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[360px] no-underline"
+              className="card-float group relative flex flex-col bg-white/[0.03] border border-white/[0.07] hover:border-blue-500/40 hover:bg-white/[0.05] p-4 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/5 w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] max-w-[340px] no-underline"
             >
-              <div className="flex justify-between items-start mb-5">
-                <div className="w-12 h-12 flex items-center justify-center">
-                  <img src={guide.logo} alt={guide.title} className="w-10 h-10 object-contain transition-transform duration-300" />
+              <div className="flex justify-between items-start mb-3">
+                <div className="w-9 h-9 flex items-center justify-center">
+                  <img src={guide.logo} alt={guide.title} className="w-8 h-8 object-contain transition-transform duration-300" />
                 </div>
-                <span className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-md border ${tagColors[guide.tag]}`}>
+                <span className={`text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-md border ${tagColors[guide.tag]}`}>
                   {guide.tag}
                 </span>
               </div>
-              <h3 className="text-base font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">
+              <h3 className="text-sm font-bold text-white mb-1.5 group-hover:text-blue-400 transition-colors duration-200">
                 {guide.title}
               </h3>
-              <p className="text-slate-500 text-xs leading-relaxed mb-5 flex-1">
+              <p className="text-slate-500 text-xs leading-relaxed mb-3 flex-1">
                 {guide.description}
               </p>
               <div className="flex items-center gap-1.5 text-blue-500 group-hover:text-blue-400 text-xs font-semibold tracking-wider uppercase transition-colors">
@@ -127,7 +127,7 @@ export default function App() {
         </div>
 
         {/* Footer section */}
-        <section className="border-t border-white/[0.06] pt-10 flex flex-col items-center gap-5">
+        <section className="border-t border-white/[0.06] pt-5 flex flex-col items-center gap-3">
           <div className="flex items-center gap-3">
             <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-blue-500/40 hover:text-blue-400 rounded-xl text-slate-300 text-xs font-medium transition-all duration-200 no-underline">
